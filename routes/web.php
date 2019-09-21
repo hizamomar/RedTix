@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('redtixs', 'RedtixController');
+Route::get('redtixs', ['uses'=>'RedtixController@index', 'as'=>'redtixs.index']);
