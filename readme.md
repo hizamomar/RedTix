@@ -14,11 +14,12 @@
 
 1. **git clone** https://github.com/hizamomar/RedTix.git
 2. **cd** _RedTix_
-3. run -> **composer install**
-4. run -> **php artisan key:generate**
-5. run -> **php artisan migrate**
-6. run -> **composer dump-autoload**
-7. run -> **php artisan serve**
+3. run -> **cp .env.example .env**
+4. run -> **composer install**
+5. run -> **php artisan key:generate**
+6. run -> **php artisan migrate**
+7. run -> **composer dump-autoload**
+8. run -> **php artisan serve**
 
 ## About Laravel
 
