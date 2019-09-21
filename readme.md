@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# Demo Site
+1. **http://redtix.hizamomar.ml/**
+
+# Install
+
+1. **git clone** https://github.com/hizamomar/RedTix.git
+2. **cd** _RedTix_
+3. run -> **composer install**
+4. run -> **php artisan key:generate**
+5. run -> **php artisan migrate**
+6. run -> **composer dump-autoload**
+7. run -> **php artisan serve**
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
