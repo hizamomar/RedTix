@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Laravel Technical Test</title>
+
+        <!-- Bootstrap CSS -->
+        <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"-->
+
+        <link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+
+         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
+
+            body {
+                padding-top: 40px;
+            }
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+              margin-bottom: 0;
+              border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+              padding-top: 20px;
+              background-color: #f1f1f1;
+              height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+              background-color: #555;
+              color: white;
+              padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+              .sidenav {
+                height: auto;
+                padding: 15px;
+              }
+              .row.content {height:auto;} 
+            }
+        </style>
+    </head>
+    <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Technical Test</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url('/') }}">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('redtixs.index') }}">Datatables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('redtixs.create') }}">Create User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/hizamomar/RedTix" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+        @yield('content')
+    </div>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <!-- DataTables -->
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <!--script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script -->
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        
+        var table = $('.data-table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('redtixs.index') }}",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'email', name: 'email'},
+                {data: 'first_name', name: 'first_name'},
+                {data: 'last_name', name: 'last_name'},                    
+                {data: 'status', name: 'status'},
+                {data: 'action', name: 'action', orderable: false, searchable: false},
+            ]
+        });
+        
+      });
+    </script>
+  </body>
+</html>
