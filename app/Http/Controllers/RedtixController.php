@@ -43,7 +43,7 @@ class RedtixController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email|unique:users',
             'first_name' => 'required',
             'last_name' => 'required',
             'status' => 'required',
