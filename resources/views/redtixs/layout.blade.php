@@ -134,6 +134,7 @@
             serverSide: true,
             ajax: "{{ route('redtixs.index') }}",
             columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
                 {data: 'email', name: 'email'},
                 {data: 'first_name', name: 'first_name'},
                 {data: 'last_name', name: 'last_name'},                    
