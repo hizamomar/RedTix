@@ -8,7 +8,7 @@
 </p>
 
 # Demo Site
-1. **http://redtix.hizamomar.ml/**
+1. **https://redtix.hizamomar.ml/**
 
 # Install
 
