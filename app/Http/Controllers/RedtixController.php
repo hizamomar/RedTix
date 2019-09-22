@@ -86,7 +86,7 @@ class RedtixController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'email' => 'required',
+            'email' => 'required|email|unique:users',
             'first_name' => 'required',
             'last_name' => 'required',
             'status' => 'required',
