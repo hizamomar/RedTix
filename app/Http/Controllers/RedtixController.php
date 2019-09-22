@@ -16,7 +16,6 @@ class RedtixController extends Controller
         if ($request->ajax()) {
             $data = User::latest()->get();
             return Datatables::of($data)
-                    ->addIndexColumn()
                     ->addColumn('action', function($row) {
                         return '<a href="/redtixs/'. $row->id .'/edit" class="btn btn-primary">Edit</a>';
                     })
