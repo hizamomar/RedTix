@@ -4,12 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel Technical Test</title>
+        <title>RedTix - Laravel Technical Test</title>
 
         <!-- Bootstrap CSS -->
-        <link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/w/dt/dt-1.10.18/datatables.min.css"/>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
 
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  
+        <link rel="shortcut icon" href="https://airasiaredtix.com/images/redtix_logo.png">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -17,6 +21,15 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <style>
+
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
             body {
                 padding-top: 40px;
             }
@@ -58,7 +71,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow fixed-top text-light">
       <div class="container">
-        <a class="navbar-brand text-white" href="#">Technical Test</a>
+        <a class="navbar-brand text-white" href="#">Laravel Technical Test</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon text-white"></span>
             </button>
@@ -83,14 +96,16 @@
       </div>
     </nav>
 
-    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="container" style="margin-top: 50px; margin-bottom: 100px;">
         @yield('content')
     </div>
 
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- DataTables -->
-    <script type="text/javascript" src="https://cdn.datatables.net/w/dt/dt-1.10.18/datatables.min.js"></script>    
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>  
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script> 
+
     <!-- Bootstrap JavaScript -->
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 

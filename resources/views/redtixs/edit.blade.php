@@ -43,7 +43,7 @@
             </select>
             <div class="invalid-feedback">Please select the status.</div>  
         </div>
-      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      <button type="submit" class="btn btn-dark btn-lg btn-block">Submit</button>
     </form>
   </div>
 </div>

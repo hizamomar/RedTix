@@ -15,14 +15,14 @@
         </div>
     @endif
     <div class="table-responsive">
-        <table class="table table-bordered data-table" >
-            <thead>
+        <table class="table table-striped table-bordered data-table" >
+            <thead class="thead-dark">
                 <tr>
-                    <th>Email</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>                
-                    <th>Status</th>
-                    <th width="100px">Action</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>                
+                    <th scope="col">Status</th>
+                    <th scope="col" width="100px">Action</th>
                 </tr>
             </thead>
             <tbody>
