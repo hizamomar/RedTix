@@ -112,13 +112,28 @@
 
     <script type="text/javascript">
       $(function () {
+
+        // Setup - add a text input to each footer cell
+        $('.data-table thead tr').clone(true).appendTo( '.data-table thead' );
+        $('.data-table thead tr:eq(1) th').each( function (i) {
+            var title = $(this).text();
+            $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+     
+            $( 'input', this ).on( 'keyup change', function () {
+                if ( table.column(i).search() !== this.value ) {
+                    table
+                        .column(i)
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );        
         
         var table = $('.data-table').DataTable({
             processing: true,
             serverSide: true,
             ajax: "{{ route('redtixs.index') }}",
             columns: [
-                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
                 {data: 'email', name: 'email'},
                 {data: 'first_name', name: 'first_name'},
                 {data: 'last_name', name: 'last_name'},                    
