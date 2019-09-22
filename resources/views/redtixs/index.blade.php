@@ -14,19 +14,20 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-   
-    <table class="table table-bordered data-table">
-        <thead>
-            <tr>
-                <th>Email</th>
-                <th>First Name</th>
-                <th>Last Name</th>                
-                <th>Status</th>
-                <th width="100px">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-bordered data-table" >
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>                
+                    <th>Status</th>
+                    <th width="100px">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
       
 @endsection

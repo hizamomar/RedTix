@@ -71,27 +71,27 @@
     <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow fixed-top text-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Technical Test</a>
+        <a class="navbar-brand text-white" href="#">Technical Test</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon text-white"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{ url('/') }}">Home
+              <a class="nav-link text-white" href="{{ url('/') }}">Home
                     <span class="sr-only">(current)</span>
-                  </a>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('redtixs.index') }}">Datatables</a>
+              <a class="nav-link text-white" href="{{ route('redtixs.index') }}">Datatables</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('redtixs.create') }}">Create User</a>
+              <a class="nav-link text-white" href="{{ route('redtixs.create') }}">Create User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/hizamomar/RedTix" target="_blank">GitHub</a>
+              <a class="nav-link text-white" href="https://github.com/hizamomar/RedTix" target="_blank">GitHub</a>
             </li>
           </ul>
         </div>
@@ -130,6 +130,7 @@
         } );        
         
         var table = $('.data-table').DataTable({
+            responsive: true,
             processing: true,
             serverSide: true,
             ajax: "{{ route('redtixs.index') }}",
